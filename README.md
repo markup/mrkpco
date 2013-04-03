@@ -1,1 +1,1 @@
-This is the source for the redesign of [the MRKPco website](http://mrkp.co) (not launched yet). Built from the bottom up as an exercise of the principles that drive the MRKPco design philosophy.
+This is the source for the redesign of [the /markup website](http://mrkp.co) (not launched yet). Built from the bottom up as an exercise of the principles that drive the /markup design philosophy.
