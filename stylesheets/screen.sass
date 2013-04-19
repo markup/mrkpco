@@ -1,0 +1,127 @@
+@import "compass/reset"
+@import "compass/css3/border-radius"
+@import "compass/css3/transition"
+
+body
+  font-family: "ff-tisa-web-pro", Times, serif
+  font-weight: 500
+  font-size: 18px
+  line-height: 1.4em
+  background-color: #eee
+  // background-image: url("../images/dark_wall.png")
+  margin: 50px 0
+  color: #222
+
+a
+  color: inherit
+  text-decoration: underline
+  nav &
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  section &
+    text-decoration: none
+    background-color: #fff
+    background-color: rgba(255,255,255,1)
+    padding: 0 0.2em
+    @include border-radius(4px)
+    color: lighten(#222,10%)
+    @include single-transition(background-color, 0.2s, ease, 0)
+    &:hover
+      text-decoration: underline
+      background-color: transparent
+      color: #000
+
+strong
+  font-family: "freight-sans-pro", sans-serif
+
+em
+  font-style: italic
+
+strong em, em strong
+  font-family: "ff-tisa-web-pro", Times, serif
+  font-weight: bold
+
+hr
+  border: none
+  border-top: 1px dashed #ccc
+  margin: 2em 0
+
+.hide
+  display: none
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 500
+  line-height: 1.2em
+  section &
+    font-family: "freight-sans-pro", sans-serif
+    font-size: 1.6em
+
+#main
+  padding: 0 1.4em
+  text-shadow: 0 1px 1px #fff
+
+p
+  text-indent: 1.2em
+  margin-bottom: 0.3em
+  &:first-of-type
+    text-indent: 0
+
+ul
+  margin: 1.2em
+  list-style-type: square
+  li
+    margin-bottom: 0.3em
+    &:last-of-type
+      margin-bottom: 0
+
+hgroup
+  text-align: center
+  height: 120px
+  padding-top: 60px
+  color: #666
+  font-style: italic
+
+.logo
+  color: transparent
+  background-image: url("../images/markup_logo_sm.png")
+  background-repeat: no-repeat
+  width: 156px
+  height: 41px
+  margin: 0 auto 0.8em
+  text-shadow: none
+
+nav
+  font-size: 0.7em
+  text-transform: uppercase
+  font-family: "freight-sans-pro", sans-serif
+  font-weight: 500
+  // width: 100%
+  position: fixed
+  top: 0
+  left: 18px
+  right: 18px
+  box-shadow: 0 -10px 24px #000
+  ol
+    padding: 0 25px
+    width: 100%
+    margin-left: -18px
+    background-color: #eee
+    height: 50px
+  li
+    float: left
+    height: 4em
+    position: relative
+    border-right: 1px dashed #ccc
+    &:last-of-type
+      border-right: none
+  a
+    display: block
+    padding: 1em 0.85em
+    &.first
+      padding-left: 0
+    &.last
+      padding-right: 0
+
+.welcome
+  // margin-top: 2em
