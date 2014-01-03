@@ -2,6 +2,8 @@
 
 require 'rubygems'
 require 'bundler'
+require 'tilt'
+Tilt.prefer Tilt::MarukuTemplate
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
