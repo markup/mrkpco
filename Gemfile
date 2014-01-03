@@ -11,6 +11,7 @@ gem 'compass'
 # Markdown and Textile
 # gem 'rdiscount' # Markdown
 gem 'kramdown' # Markdown, via Slim
+gem 'maruku'
 # gem 'RedCloth'  # Textile
 
 # Other templating languages
