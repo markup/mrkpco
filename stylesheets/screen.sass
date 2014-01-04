@@ -4,7 +4,7 @@
 
 $dark_gray: rgb(64,64,64)
 
-@mixin rems($property,$value)
+@mixin rempx($property,$value)
   $px: null !default
   $rem: null !default
   @if type-of($value) == "number"
@@ -30,11 +30,15 @@ $dark_gray: rgb(64,64,64)
   #{$property}: #{$rem}
 
 html
+  font-size: 62.5%
+
+body
   font-family: "adelle", serif
-  font-size: 16px
+  @include rempx(font-size,16)
+  @include rempx(line-height,22)
   color: $dark_gray
 
 section
-  @include rems(margin,50 auto 20)
-  @include rems(padding,50)
+  @include rempx(margin,50 auto 20)
+  @include rempx(width,500)
   &.intro
