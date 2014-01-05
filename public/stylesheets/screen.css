@@ -120,7 +120,7 @@ a:hover {
 
 hr {
   border: none;
-  border-top: 1px solid #dadada;
+  border-top: 1px solid #dedede;
   margin: 40px 0px 30px;
   margin: 4rem 0rem 3rem;
 }
@@ -258,7 +258,7 @@ nav a {
   transition: color 1s ease;
 }
 nav a:link {
-  color: #dadada;
+  color: #dedede;
   text-decoration: none;
   -webkit-transition: border-bottom 0.2s ease;
   -moz-transition: border-bottom 0.2s ease;
@@ -267,11 +267,11 @@ nav a:link {
   border-bottom: 1px solid transparent;
 }
 nav a:visited {
-  color: #dadada;
+  color: #dedede;
 }
 nav a:hover {
-  color: #dadada;
-  border-bottom: 1px solid #dadada;
+  color: #dedede;
+  border-bottom: 1px solid #dedede;
 }
 nav a:hover {
   border-bottom: 1px solid transparent;
@@ -436,11 +436,11 @@ section.ideas h1, section.ideas p {
   color: #9bffff;
 }
 section.ideas h2 {
-  color: #dadada;
+  color: #dedede;
   font-style: normal;
 }
 section.ideas article p {
-  color: #dadada;
+  color: #dedede;
 }
 section.contact .left p {
   font-size: 22px;
@@ -474,7 +474,7 @@ section.contact .left p {
 
 #phive {
   background-color: black;
-  color: #dadada;
+  color: #dedede;
 }
 #phive h2, #phive h3, #phive .highlight {
   color: #fda329;
@@ -521,7 +521,7 @@ section.contact .left p {
 
 #gridwell {
   background-color: #34251c;
-  color: #dadada;
+  color: #dedede;
 }
 #gridwell h2, #gridwell h3, #gridwell .highlight {
   color: #9bcc25;
@@ -544,7 +544,7 @@ section.contact .left p {
 }
 
 #soloff {
-  background-color: #f3f3f3;
+  background-color: #f8f8f8;
 }
 #soloff h2, #soloff h3, #soloff .highlight {
   color: #9a0f1c;
