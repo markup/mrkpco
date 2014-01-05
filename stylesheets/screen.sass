@@ -76,14 +76,34 @@ blockquote
   @include rempx(max-width,1024)
 
 header
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   right: 0
   z-index: 10
+  background-color: rgba(0,0,0,0.7)
+  h1
+    float: left
+    color: transparent
+    text-indent: -100000px
+    @include rempx(width,164)
+    @include rempx(height,48)
+    background-image: url("../images/markup-logo.png")
+
+nav
+  ol
+    float: right
+    @include rempx(margin,12 0 0)
+  li
+    display: inline
   a
     @include basic-link(#fff,#fff,#fff,plain)
     @include secondary-type
+    @include rempx(padding,12 28)
+    @include single-transition(color,0.5s,ease)
+    &:hover
+      border-bottom: 1px solid transparent
+      color: $cyan
 
 section
   position: relative
