@@ -329,6 +329,7 @@ nav:target a.deactivate-menu {
     height: auto;
     opacity: 0;
     padding: 0;
+    overflow: visible;
     margin: 0px 0px 0px;
     margin: 0rem 0rem 0rem;
     -webkit-transition: margin-top 0.3s ease, opacity 0.3s ease;
@@ -404,8 +405,6 @@ nav li a:hover {
 }
 @media only screen and (min-width: 767px) {
   nav li a {
-    padding: 12px 18px;
-    padding: 1.2rem 1.8rem;
     position: relative;
   }
 }

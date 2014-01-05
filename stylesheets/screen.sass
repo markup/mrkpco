@@ -131,6 +131,7 @@ nav
     height: auto
     opacity: 0
     padding: 0
+    overflow: visible
     @include rempx(margin,0 0 0)
     @include transition(margin-top 0.30s ease,opacity 0.30s ease)
     &:target
@@ -164,7 +165,6 @@ nav
         border-bottom: 1px solid transparent
         color: $cyan
       @include tablet-portrait-and-up
-        @include rempx(padding,12 18)
         position: relative
 
 a.activate-menu
