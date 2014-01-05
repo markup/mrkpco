@@ -100,6 +100,24 @@ p.callout {
   width: 100% !important;
   max-width: none !important;
 }
+p.secondary {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+@media only screen and (min-width: 767px) {
+  .left {
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .right {
+    float: right;
+  }
+}
 
 a:link {
   color: #d6408a;
@@ -435,10 +453,6 @@ section.philosophy p, section.philosophy h1 {
     margin: 18px 0px -4px 0px;
     margin: 1.8rem 0rem -0.4rem 0rem;
     margin-right: 15%;
-    font-size: 16px;
-    font-size: 1.6rem;
-    line-height: 24px;
-    line-height: 2.4rem;
   }
 }
 section.work {
@@ -466,7 +480,7 @@ section.work article .highlight {
   line-height: 2.8rem;
 }
 @media only screen and (min-width: 767px) {
-  section.work article.right p, section.work article.right hgroup {
+  section.work article.right-layout p, section.work article.right-layout hgroup {
     width: 310px;
     width: 31rem;
     float: right;
@@ -474,7 +488,7 @@ section.work article .highlight {
   }
 }
 @media only screen and (min-width: 767px) {
-  section.work article.left p, section.work article.left hgroup {
+  section.work article.left-layout p, section.work article.left-layout hgroup {
     width: 310px;
     width: 31rem;
     float: left;
@@ -504,21 +518,12 @@ section.collaborators p, section.collaborators h1, section.collaborators article
     max-width: 55rem;
   }
   section.collaborators .left, section.ideas .left, section.contact .left {
-    float: left;
     clear: left;
     width: 32%;
   }
   section.collaborators .right, section.ideas .right, section.contact .right {
-    float: right;
     clear: none;
     width: 64%;
-  }
-  section.collaborators .secondary, section.ideas .secondary, section.contact .secondary {
-    font-size: 16px;
-    font-size: 1.6rem;
-    line-height: 24px;
-    line-height: 2.4rem;
-    margin-right: 6%;
   }
 }
 section.ideas {

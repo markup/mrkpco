@@ -29,6 +29,16 @@ p
     clear: left
     width: 100% !important
     max-width: none !important
+  &.secondary
+    @include type-size(regular)
+
+.left
+  @include tablet-portrait-and-up
+    float: left
+
+.right
+  @include tablet-portrait-and-up
+    float: right
 
 a
   @include basic-link($magenta)
@@ -215,7 +225,6 @@ section
         clear: none
         @include rempx(margin,18 0 -4 0)
         margin-right: 15%
-        @include type-size(regular)
   &.work
     padding: 0
     h1
@@ -229,19 +238,19 @@ section
         margin-right: auto
       .highlight
         @include type-size(larger)
-      &.right
+      &.right-layout
         @include tablet-portrait-and-up
           p, hgroup
             @include rempx(width,310)
             float: right
             clear: right
-      &.left
+      &.left-layout
         @include tablet-portrait-and-up
           p, hgroup
             @include rempx(width,310)
             float: left
             clear: left
-      &.center
+      &.center-layout
   &.collaborators, &.ideas, &.contact
     @include type-size(larger)
     p, h1, article
@@ -256,16 +265,11 @@ section
       p
         @include rempx(max-width,550)
       .left
-        float: left
         clear: left
         width: 32%
       .right
-        float: right
         clear: none
         width: 64%
-      .secondary
-        @include type-size(regular)
-        margin-right: 6%
   &.ideas
     background-color: $dark-gray
     h1, p
