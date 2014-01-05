@@ -193,27 +193,27 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: rgba(39, 39, 39, 0.2);
-  -webkit-transition: background-color 0.2s ease;
-  -moz-transition: background-color 0.2s ease;
-  -o-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
+  background-color: #272727;
+  background-color: rgba(39, 39, 39, 0.95);
+  min-height: 48px;
+  min-height: 4.8rem;
 }
-header:hover, header.top {
-  background-color: rgba(39, 39, 39, 0.87);
-}
-header:hover h1, header.top h1 {
-  width: 164px;
-  width: 16.4rem;
-  -webkit-transition: width 0.5s ease;
-  -moz-transition: width 0.5s ease;
-  -o-transition: width 0.5s ease;
-  transition: width 0.5s ease;
-}
-header:hover nav ol, header.top nav ol {
-  margin-top: 12px;
-  margin-top: 1.2rem;
-  opacity: 1;
+@media only screen and (min-width: 767px) {
+  header {
+    background-color: rgba(39, 39, 39, 0.2);
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+  }
+  header:hover, header.top {
+    background-color: rgba(39, 39, 39, 0.87);
+  }
+  header:hover nav, header.top nav {
+    margin-top: 12px;
+    margin-top: 1.2rem;
+    opacity: 1;
+  }
 }
 header h1 {
   float: left;
@@ -224,40 +224,88 @@ header h1 {
   height: 48px;
   height: 4.8rem;
   background-image: url("../images/markup-logo.png");
-  -webkit-transition: width 0.75s ease;
-  -webkit-transition-delay: 0;
-  -moz-transition: width 0.75s ease 0;
-  -o-transition: width 0.75s ease 0;
-  transition: width 0.75s ease 0;
 }
 
+nav {
+  clear: left;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 48px;
+  border: none;
+  -webkit-transition: height 0.45s ease;
+  -moz-transition: height 0.45s ease;
+  -o-transition: height 0.45s ease;
+  transition: height 0.45s ease;
+}
+nav:target {
+  height: 800px;
+  height: 80rem;
+}
+nav:target a.deactivate-menu {
+  z-index: 12;
+}
+@media only screen and (min-width: 767px) {
+  nav {
+    clear: none;
+    float: right;
+    height: auto;
+    opacity: 0;
+    padding: 0;
+    margin: 0px 0px 0px;
+    margin: 0rem 0rem 0rem;
+    -webkit-transition: margin-top 0.3s ease, opacity 0.3s ease;
+    -moz-transition: margin-top 0.3s ease, opacity 0.3s ease;
+    -o-transition: margin-top 0.3s ease, opacity 0.3s ease;
+    transition: margin-top 0.3s ease, opacity 0.3s ease;
+  }
+}
 nav ol {
-  float: right;
-  opacity: 0;
-  margin: 0px 0px 0px;
-  margin: 0rem 0rem 0rem;
-  -webkit-transition: margin-top 0.3s ease, opacity 0.3s ease;
-  -moz-transition: margin-top 0.3s ease, opacity 0.3s ease;
-  -o-transition: margin-top 0.3s ease, opacity 0.3s ease;
-  transition: margin-top 0.3s ease, opacity 0.3s ease;
+  background-color: #272727;
+  background-color: rgba(39, 39, 39, 0.95);
+}
+@media only screen and (min-width: 767px) {
+  nav ol {
+    background-color: transparent;
+    float: right;
+  }
 }
 nav li {
-  display: inline;
+  padding: 24px 28px;
+  padding: 2.4rem 2.8rem;
+  position: relative;
+  border-top: 1px solid #404040;
 }
-nav a {
+@media only screen and (min-width: 767px) {
+  nav li {
+    display: inline;
+    padding: 0;
+    border-top: none;
+  }
+}
+nav li a {
   font-family: "brandon-grotesque", sans-serif;
   text-transform: uppercase;
   font-style: normal;
   font-size: 12px;
   font-size: 1.2rem;
-  padding: 12px 28px;
-  padding: 1.2rem 2.8rem;
   -webkit-transition: color 1s ease;
   -moz-transition: color 1s ease;
   -o-transition: color 1s ease;
   transition: color 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 14;
+  padding: 12px 18px;
+  padding: 1.2rem 1.8rem;
 }
-nav a:link {
+nav li a:link {
   color: #dedede;
   text-decoration: none;
   -webkit-transition: border-bottom 0.2s ease;
@@ -266,16 +314,57 @@ nav a:link {
   transition: border-bottom 0.2s ease;
   border-bottom: 1px solid transparent;
 }
-nav a:visited {
+nav li a:visited {
   color: #dedede;
 }
-nav a:hover {
+nav li a:hover {
   color: #dedede;
   border-bottom: 1px solid #dedede;
 }
-nav a:hover {
+nav li a:hover {
   border-bottom: 1px solid transparent;
   color: #9bffff;
+}
+@media only screen and (min-width: 767px) {
+  nav li a {
+    padding: 12px 18px;
+    padding: 1.2rem 1.8rem;
+    position: relative;
+  }
+}
+
+a.activate-menu {
+  color: transparent;
+  text-indent: -100000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+@media only screen and (min-width: 767px) {
+  a.activate-menu {
+    display: none;
+  }
+}
+
+a.deactivate-menu {
+  color: transparent;
+  text-indent: -100000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+}
+@media only screen and (min-width: 767px) {
+  a.deactivate-menu {
+    display: none;
+  }
 }
 
 section {
