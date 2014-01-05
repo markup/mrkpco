@@ -15,5 +15,8 @@
   @else if $size == "regular"
     $size: $regular-type
     $size-lead: $regular-type-lead
-  @include rempx(font-size,$size)
-  @include rempx(line-height,$size-lead)
+  @include rempx(font-size,$size*0.8)
+  @include rempx(line-height,$size-lead*0.9)
+  @include mobile-landscape-and-up
+    @include rempx(font-size,$size)
+    @include rempx(line-height,$size-lead)

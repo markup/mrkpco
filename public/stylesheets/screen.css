@@ -62,11 +62,19 @@ html {
 body {
   font-family: "adelle", serif;
   font-style: italic;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 24px;
-  line-height: 2.4rem;
+  font-size: 12.8px;
+  font-size: 1.28rem;
+  line-height: 21.6px;
+  line-height: 2.16rem;
   color: #404040;
+}
+@media only screen and (min-width: 479px) {
+  body {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
 }
 
 h1, h3 {
@@ -78,12 +86,20 @@ h1, h3 {
 }
 
 h2 {
-  font-size: 42px;
-  font-size: 4.2rem;
-  line-height: 44px;
-  line-height: 4.4rem;
+  font-size: 33.6px;
+  font-size: 3.36rem;
+  line-height: 39.6px;
+  line-height: 3.96rem;
   margin-top: 8px;
   margin-top: 0.8rem;
+}
+@media only screen and (min-width: 479px) {
+  h2 {
+    font-size: 42px;
+    font-size: 4.2rem;
+    line-height: 44px;
+    line-height: 4.4rem;
+  }
 }
 
 p {
@@ -91,20 +107,36 @@ p {
   margin-top: 1.4rem;
 }
 p.callout {
-  font-size: 42px;
-  font-size: 4.2rem;
-  line-height: 44px;
-  line-height: 4.4rem;
+  font-size: 33.6px;
+  font-size: 3.36rem;
+  line-height: 39.6px;
+  line-height: 3.96rem;
   color: #d6408a;
   clear: left;
   width: 100% !important;
   max-width: none !important;
 }
+@media only screen and (min-width: 479px) {
+  p.callout {
+    font-size: 42px;
+    font-size: 4.2rem;
+    line-height: 44px;
+    line-height: 4.4rem;
+  }
+}
 p.secondary {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 24px;
-  line-height: 2.4rem;
+  font-size: 12.8px;
+  font-size: 1.28rem;
+  line-height: 21.6px;
+  line-height: 2.16rem;
+}
+@media only screen and (min-width: 479px) {
+  p.secondary {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
 }
 
 @media only screen and (min-width: 767px) {
@@ -144,10 +176,10 @@ hr {
 }
 
 blockquote {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 24px;
-  line-height: 2.4rem;
+  font-size: 12.8px;
+  font-size: 1.28rem;
+  line-height: 21.6px;
+  line-height: 2.16rem;
   overflow: hidden;
   *zoom: 1;
   margin-top: 33px;
@@ -157,6 +189,14 @@ blockquote {
   margin-left: auto;
   margin-right: auto;
   font-style: normal;
+}
+@media only screen and (min-width: 479px) {
+  blockquote {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
 }
 blockquote p {
   width: 75%;
@@ -172,17 +212,33 @@ blockquote p.cite {
 blockquote cite {
   float: right;
   display: block;
-  font-size: 22px;
-  font-size: 2.2rem;
-  line-height: 28px;
-  line-height: 2.8rem;
+  font-size: 17.6px;
+  font-size: 1.76rem;
+  line-height: 25.2px;
+  line-height: 2.52rem;
+}
+@media only screen and (min-width: 479px) {
+  blockquote cite {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
 }
 blockquote cite span {
   display: block;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 24px;
-  line-height: 2.4rem;
+  font-size: 12.8px;
+  font-size: 1.28rem;
+  line-height: 21.6px;
+  line-height: 2.16rem;
+}
+@media only screen and (min-width: 479px) {
+  blockquote cite span {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
 }
 blockquote img {
   float: right;
@@ -398,12 +454,20 @@ section {
 section.intro {
   background-color: #404040;
   color: #9bffff;
-  font-size: 22px;
-  font-size: 2.2rem;
-  line-height: 28px;
-  line-height: 2.8rem;
+  font-size: 17.6px;
+  font-size: 1.76rem;
+  line-height: 25.2px;
+  line-height: 2.52rem;
   padding-top: 130px;
   padding-top: 13rem;
+}
+@media only screen and (min-width: 479px) {
+  section.intro {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
 }
 section.intro p {
   max-width: 325px;
@@ -426,10 +490,18 @@ section.intro a:hover {
   border-bottom: 1px solid transparent;
 }
 section.philosophy {
-  font-size: 22px;
-  font-size: 2.2rem;
-  line-height: 28px;
-  line-height: 2.8rem;
+  font-size: 17.6px;
+  font-size: 1.76rem;
+  line-height: 25.2px;
+  line-height: 2.52rem;
+}
+@media only screen and (min-width: 479px) {
+  section.philosophy {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
 }
 section.philosophy p, section.philosophy h1 {
   max-width: 460px;
@@ -474,10 +546,18 @@ section.work article p, section.work article hgroup {
   margin-right: auto;
 }
 section.work article .highlight {
-  font-size: 22px;
-  font-size: 2.2rem;
-  line-height: 28px;
-  line-height: 2.8rem;
+  font-size: 17.6px;
+  font-size: 1.76rem;
+  line-height: 25.2px;
+  line-height: 2.52rem;
+}
+@media only screen and (min-width: 479px) {
+  section.work article .highlight {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
 }
 @media only screen and (min-width: 767px) {
   section.work article.right-layout p, section.work article.right-layout hgroup {
@@ -496,10 +576,18 @@ section.work article .highlight {
   }
 }
 section.collaborators, section.ideas, section.contact {
-  font-size: 22px;
-  font-size: 2.2rem;
-  line-height: 28px;
-  line-height: 2.8rem;
+  font-size: 17.6px;
+  font-size: 1.76rem;
+  line-height: 25.2px;
+  line-height: 2.52rem;
+}
+@media only screen and (min-width: 479px) {
+  section.collaborators, section.ideas, section.contact {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
 }
 section.collaborators p, section.collaborators h1, section.collaborators article, section.ideas p, section.ideas h1, section.ideas article, section.contact p, section.contact h1, section.contact article {
   max-width: 460px;
@@ -540,10 +628,18 @@ section.ideas article p {
   color: #dedede;
 }
 section.contact .left p {
-  font-size: 22px;
-  font-size: 2.2rem;
-  line-height: 28px;
-  line-height: 2.8rem;
+  font-size: 17.6px;
+  font-size: 1.76rem;
+  line-height: 25.2px;
+  line-height: 2.52rem;
+}
+@media only screen and (min-width: 479px) {
+  section.contact .left p {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 28px;
+    line-height: 2.8rem;
+  }
 }
 
 #wfgc {
