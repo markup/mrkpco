@@ -193,14 +193,14 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: rgba(64, 64, 64, 0.2);
-  -webkit-transition: background-color 0.25s ease;
-  -moz-transition: background-color 0.25s ease;
-  -o-transition: background-color 0.25s ease;
-  transition: background-color 0.25s ease;
+  background-color: rgba(39, 39, 39, 0.2);
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 header:hover, header.top {
-  background-color: rgba(64, 64, 64, 0.87);
+  background-color: rgba(39, 39, 39, 0.87);
 }
 header:hover h1, header.top h1 {
   width: 164px;
@@ -213,13 +213,14 @@ header:hover h1, header.top h1 {
 header:hover nav ol, header.top nav ol {
   margin-top: 12px;
   margin-top: 1.2rem;
+  opacity: 1;
 }
 header h1 {
   float: left;
   color: transparent;
   text-indent: -100000px;
-  width: 55px;
-  width: 5.5rem;
+  width: 164px;
+  width: 16.4rem;
   height: 48px;
   height: 4.8rem;
   background-image: url("../images/markup-logo.png");
@@ -232,12 +233,13 @@ header h1 {
 
 nav ol {
   float: right;
-  margin: -30px 0px 0px;
-  margin: -3rem 0rem 0rem;
-  -webkit-transition: margin-top 0.5s ease;
-  -moz-transition: margin-top 0.5s ease;
-  -o-transition: margin-top 0.5s ease;
-  transition: margin-top 0.5s ease;
+  opacity: 0;
+  margin: 0px 0px 0px;
+  margin: 0rem 0rem 0rem;
+  -webkit-transition: margin-top 0.3s ease, opacity 0.3s ease;
+  -moz-transition: margin-top 0.3s ease, opacity 0.3s ease;
+  -o-transition: margin-top 0.3s ease, opacity 0.3s ease;
+  transition: margin-top 0.3s ease, opacity 0.3s ease;
 }
 nav li {
   display: inline;
