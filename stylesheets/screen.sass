@@ -1,44 +1,229 @@
 @import "compass/reset"
 @import "compass/css3/border-radius"
 @import "compass/css3/transition"
-
-$dark_gray: rgb(64,64,64)
-
-@mixin rempx($property,$value)
-  $px: null !default
-  $rem: null !default
-  @if type-of($value) == "number"
-    $px: #{$value}px
-    $rem: #{($value/10)}rem
-  @else
-    @each $val in $value
-      @if $px == null
-        @if type-of($val) == "number"
-          $px: #{$val}px
-          $rem: #{($val/10)}rem
-        @else
-          $px: #{$val}
-          $rem: #{$val}
-      @else
-        @if type-of($val) == "number"
-          $px: $px + " #{$val}px"
-          $rem: $rem + " #{($val/10)}rem"
-        @else
-          $px: $px + " #{$val}"
-          $rem: $rem + " #{$val}"
-  #{$property}: #{$px}
-  #{$property}: #{$rem}
+@import "compass/utilities/general/clearfix"
+@import "modules/all"
 
 html
   font-size: 62.5%
+  -webkit-font-smoothing: antialiased
 
 body
   font-family: "adelle", serif
-  @include rempx(font-size,16)
-  @include rempx(line-height,22)
-  color: $dark_gray
+  font-style: italic
+  @include type-size(regular)
+  color: $dark-gray
+
+h1, h3
+  @include secondary-type
+
+h2
+  @include type-size(largest)
+  @include rempx(margin-top,8)
+
+p
+  @include rempx(margin-top,14)
+  &.callout
+    @include type-size(largest)
+    color: $magenta
+    clear: left
+    width: 100% !important
+    max-width: none !important
+
+a
+  @include basic-link($magenta)
+
+hr
+  border: none
+  border-top: 1px solid $light-gray
+  @include rempx(margin,40 0 30)
+
+blockquote
+  @include type-size(regular)
+  @include clearfix
+  @include rempx(margin-top,33)
+  @include rempx(max-width,460)
+  margin-left: auto
+  margin-right: auto
+  font-style: normal
+  p
+    width: 75%
+    margin-left: 0 !important
+    &.cite
+      width: 100%
+      margin: 0
+      clear: right
+      float: right
+      text-align: right
+  cite
+    float: right
+    display: block
+    @include type-size(larger)
+    span
+      display: block
+      @include type-size(regular)
+  img
+    float: right
+    clear: none
+    width: 30%
+    margin-right: -33.333333%
+    @include rempx(margin-bottom,20)
+  @include tablet-portrait-and-up
+    max-width: none
+
+.container
+  @include rempx(margin,0 auto)
+  @include rempx(max-width,1024)
+
+header
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 10
+  a
+    @include basic-link(#fff,#fff,#fff,plain)
+    @include secondary-type
 
 section
-  @include rempx(margin,50 auto 20)
-  @include rempx(width,500)
+  position: relative
+  @include clearfix
+  @include rempx(padding,90 18)
   &.intro
+    background-color: $dark-gray
+    color: $cyan
+    @include type-size(larger)
+    @include rempx(padding-top,130)
+    p
+      @include rempx(max-width,325)
+    a
+      @include basic-link(#fff,#fff,#fff)
+  &.philosophy
+    @include type-size(larger)
+    p, h1
+      @include rempx(max-width,460)
+      margin-left: auto
+      margin-right: auto
+    @include tablet-portrait-and-up
+      p, h1
+        max-width: none
+      .left
+        width: 48%
+        float: left
+        clear: left
+      .right
+        width: 33%
+        float: right
+        clear: none
+        @include rempx(margin,18 0 -4 0)
+        margin-right: 15%
+        @include type-size(regular)
+  &.work
+    padding: 0
+    h1
+      display: none
+    article
+      @include rempx(padding,90 18)
+      @include clearfix
+      p, hgroup
+        @include rempx(max-width,460)
+        margin-left: auto
+        margin-right: auto
+      .highlight
+        @include type-size(larger)
+      &.right
+        @include tablet-portrait-and-up
+          p, hgroup
+            @include rempx(width,310)
+            float: right
+            clear: right
+      &.left
+        @include tablet-portrait-and-up
+          p, hgroup
+            @include rempx(width,310)
+            float: left
+            clear: left
+      &.center
+  &.collaborators, &.ideas, &.contact
+    @include type-size(larger)
+    p, h1, article
+      @include rempx(max-width,460)
+      margin-left: auto
+      margin-right: auto
+    @include tablet-portrait-and-up
+      p, h1, article
+        max-width: none
+        margin-left: 0
+        margin-right: 0
+      p
+        @include rempx(max-width,550)
+      .left
+        float: left
+        clear: left
+        width: 32%
+      .right
+        float: right
+        clear: none
+        width: 64%
+      .secondary
+        @include type-size(regular)
+        margin-right: 6%
+  &.ideas
+    background-color: $dark-gray
+    h1, p
+      color: $cyan
+    h2
+      color: $light-gray
+      font-style: normal
+    article
+      p
+        color: $light-gray
+  &.contact
+    .left
+      p
+        @include type-size(larger)
+
+
+#wfgc
+  background-color: $wfgc-back
+  h2, h3, .highlight
+    color: $wfgc-fore
+  a
+    @include basic-link($wfgc-fore)
+
+#phive
+  background-color: #000
+  color: $light-gray
+  h2, h3, .highlight
+    color: $phive
+  a
+    @include basic-link($phive)
+
+#sow
+  background-color: $sow-back
+  h2, h3, .highlight
+    color: $sow-fore
+  a
+    @include basic-link($sow-fore)
+
+#gridwell
+  background-color: $gridwell-back
+  color: $light-gray
+  h2, h3, .highlight
+    color: $gridwell-fore
+  a
+    @include basic-link($gridwell-fore)
+
+#soloff
+  background-color: $soloff-back
+  h2, h3, .highlight
+    color: $soloff-fore
+  a
+    @include basic-link($soloff-fore)
+
+#asoplace
+  background-color: $asoplace-back
+  h2, h3, .highlight
+    color: $asoplace-fore
+  a
+    @include basic-link($asoplace-fore)

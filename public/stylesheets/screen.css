@@ -55,21 +55,476 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
   font-family: "adelle", serif;
+  font-style: italic;
   font-size: 16px;
   font-size: 1.6rem;
-  line-height: 22px;
-  line-height: 2.2rem;
+  line-height: 24px;
+  line-height: 2.4rem;
   color: #404040;
 }
 
+h1, h3 {
+  font-family: "brandon-grotesque", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 42px;
+  font-size: 4.2rem;
+  line-height: 44px;
+  line-height: 4.4rem;
+  margin-top: 8px;
+  margin-top: 0.8rem;
+}
+
+p {
+  margin-top: 14px;
+  margin-top: 1.4rem;
+}
+p.callout {
+  font-size: 42px;
+  font-size: 4.2rem;
+  line-height: 44px;
+  line-height: 4.4rem;
+  color: #d6408a;
+  clear: left;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+a:link {
+  color: #d6408a;
+  text-decoration: none;
+  -webkit-transition: border-bottom 0.2s ease;
+  -moz-transition: border-bottom 0.2s ease;
+  -o-transition: border-bottom 0.2s ease;
+  transition: border-bottom 0.2s ease;
+  border-bottom: 1px solid #d6408a;
+}
+a:visited {
+  color: #d6408a;
+}
+a:hover {
+  color: #d6408a;
+  border-bottom: 1px solid transparent;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid gainsboro;
+  margin: 40px 0px 30px;
+  margin: 4rem 0rem 3rem;
+}
+
+blockquote {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 33px;
+  margin-top: 3.3rem;
+  max-width: 460px;
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: normal;
+}
+blockquote p {
+  width: 75%;
+  margin-left: 0 !important;
+}
+blockquote p.cite {
+  width: 100%;
+  margin: 0;
+  clear: right;
+  float: right;
+  text-align: right;
+}
+blockquote cite {
+  float: right;
+  display: block;
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+blockquote cite span {
+  display: block;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+blockquote img {
+  float: right;
+  clear: none;
+  width: 30%;
+  margin-right: -33.33333%;
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 767px) {
+  blockquote {
+    max-width: none;
+  }
+}
+
+.container {
+  margin: 0px auto;
+  margin: 0rem auto;
+  max-width: 1024px;
+  max-width: 102.4rem;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+header a {
+  font-family: "brandon-grotesque", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+header a:link {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: border-bottom 0.2s ease;
+  -moz-transition: border-bottom 0.2s ease;
+  -o-transition: border-bottom 0.2s ease;
+  transition: border-bottom 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+header a:visited {
+  color: white;
+}
+header a:hover {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
 section {
-  margin: 50px auto 20px;
-  margin: 5rem auto 2rem;
-  width: 500px;
-  width: 50rem;
+  position: relative;
+  overflow: hidden;
+  *zoom: 1;
+  padding: 90px 18px;
+  padding: 9rem 1.8rem;
+}
+section.intro {
+  background-color: #404040;
+  color: #9bffff;
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  padding-top: 130px;
+  padding-top: 13rem;
+}
+section.intro p {
+  max-width: 325px;
+  max-width: 32.5rem;
+}
+section.intro a:link {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: border-bottom 0.2s ease;
+  -moz-transition: border-bottom 0.2s ease;
+  -o-transition: border-bottom 0.2s ease;
+  transition: border-bottom 0.2s ease;
+  border-bottom: 1px solid white;
+}
+section.intro a:visited {
+  color: white;
+}
+section.intro a:hover {
+  color: white;
+  border-bottom: 1px solid transparent;
+}
+section.philosophy {
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+section.philosophy p, section.philosophy h1 {
+  max-width: 460px;
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 767px) {
+  section.philosophy p, section.philosophy h1 {
+    max-width: none;
+  }
+  section.philosophy .left {
+    width: 48%;
+    float: left;
+    clear: left;
+  }
+  section.philosophy .right {
+    width: 33%;
+    float: right;
+    clear: none;
+    margin: 18px 0px -4px 0px;
+    margin: 1.8rem 0rem -0.4rem 0rem;
+    margin-right: 15%;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+  }
+}
+section.work {
+  padding: 0;
+}
+section.work h1 {
+  display: none;
+}
+section.work article {
+  padding: 90px 18px;
+  padding: 9rem 1.8rem;
+  overflow: hidden;
+  *zoom: 1;
+}
+section.work article p, section.work article hgroup {
+  max-width: 460px;
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.work article .highlight {
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+@media only screen and (min-width: 767px) {
+  section.work article.right p, section.work article.right hgroup {
+    width: 310px;
+    width: 31rem;
+    float: right;
+    clear: right;
+  }
+}
+@media only screen and (min-width: 767px) {
+  section.work article.left p, section.work article.left hgroup {
+    width: 310px;
+    width: 31rem;
+    float: left;
+    clear: left;
+  }
+}
+section.collaborators, section.ideas, section.contact {
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+section.collaborators p, section.collaborators h1, section.collaborators article, section.ideas p, section.ideas h1, section.ideas article, section.contact p, section.contact h1, section.contact article {
+  max-width: 460px;
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 767px) {
+  section.collaborators p, section.collaborators h1, section.collaborators article, section.ideas p, section.ideas h1, section.ideas article, section.contact p, section.contact h1, section.contact article {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  section.collaborators p, section.ideas p, section.contact p {
+    max-width: 550px;
+    max-width: 55rem;
+  }
+  section.collaborators .left, section.ideas .left, section.contact .left {
+    float: left;
+    clear: left;
+    width: 32%;
+  }
+  section.collaborators .right, section.ideas .right, section.contact .right {
+    float: right;
+    clear: none;
+    width: 64%;
+  }
+  section.collaborators .secondary, section.ideas .secondary, section.contact .secondary {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+    margin-right: 6%;
+  }
+}
+section.ideas {
+  background-color: #404040;
+}
+section.ideas h1, section.ideas p {
+  color: #9bffff;
+}
+section.ideas h2 {
+  color: gainsboro;
+  font-style: normal;
+}
+section.ideas article p {
+  color: gainsboro;
+}
+section.contact .left p {
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+}
+
+#wfgc {
+  background-color: #fdcfa1;
+}
+#wfgc h2, #wfgc h3, #wfgc .highlight {
+  color: #f0573d;
+}
+#wfgc a:link {
+  color: #f0573d;
+  text-decoration: none;
+  -webkit-transition: border-bottom 0.2s ease;
+  -moz-transition: border-bottom 0.2s ease;
+  -o-transition: border-bottom 0.2s ease;
+  transition: border-bottom 0.2s ease;
+  border-bottom: 1px solid #f0573d;
+}
+#wfgc a:visited {
+  color: #f0573d;
+}
+#wfgc a:hover {
+  color: #f0573d;
+  border-bottom: 1px solid transparent;
+}
+
+#phive {
+  background-color: black;
+  color: gainsboro;
+}
+#phive h2, #phive h3, #phive .highlight {
+  color: #fda329;
+}
+#phive a:link {
+  color: #fda329;
+  text-decoration: none;
+  -webkit-transition: border-bottom 0.2s ease;
+  -moz-transition: border-bottom 0.2s ease;
+  -o-transition: border-bottom 0.2s ease;
+  transition: border-bottom 0.2s ease;
+  border-bottom: 1px solid #fda329;
+}
+#phive a:visited {
+  color: #fda329;
+}
+#phive a:hover {
+  color: #fda329;
+  border-bottom: 1px solid transparent;
+}
+
+#sow {
+  background-color: #a9dde3;
+}
+#sow h2, #sow h3, #sow .highlight {
+  color: #bb0e29;
+}
+#sow a:link {
+  color: #bb0e29;
+  text-decoration: none;
+  -webkit-transition: border-bottom 0.2s ease;
+  -moz-transition: border-bottom 0.2s ease;
+  -o-transition: border-bottom 0.2s ease;
+  transition: border-bottom 0.2s ease;
+  border-bottom: 1px solid #bb0e29;
+}
+#sow a:visited {
+  color: #bb0e29;
+}
+#sow a:hover {
+  color: #bb0e29;
+  border-bottom: 1px solid transparent;
+}
+
+#gridwell {
+  background-color: #34251c;
+  color: gainsboro;
+}
+#gridwell h2, #gridwell h3, #gridwell .highlight {
+  color: #9bcc25;
+}
+#gridwell a:link {
+  color: #9bcc25;
+  text-decoration: none;
+  -webkit-transition: border-bottom 0.2s ease;
+  -moz-transition: border-bottom 0.2s ease;
+  -o-transition: border-bottom 0.2s ease;
+  transition: border-bottom 0.2s ease;
+  border-bottom: 1px solid #9bcc25;
+}
+#gridwell a:visited {
+  color: #9bcc25;
+}
+#gridwell a:hover {
+  color: #9bcc25;
+  border-bottom: 1px solid transparent;
+}
+
+#soloff {
+  background-color: #f6f6f6;
+}
+#soloff h2, #soloff h3, #soloff .highlight {
+  color: #9a0f1c;
+}
+#soloff a:link {
+  color: #9a0f1c;
+  text-decoration: none;
+  -webkit-transition: border-bottom 0.2s ease;
+  -moz-transition: border-bottom 0.2s ease;
+  -o-transition: border-bottom 0.2s ease;
+  transition: border-bottom 0.2s ease;
+  border-bottom: 1px solid #9a0f1c;
+}
+#soloff a:visited {
+  color: #9a0f1c;
+}
+#soloff a:hover {
+  color: #9a0f1c;
+  border-bottom: 1px solid transparent;
+}
+
+#asoplace {
+  background-color: white;
+}
+#asoplace h2, #asoplace h3, #asoplace .highlight {
+  color: #e82634;
+}
+#asoplace a:link {
+  color: #e82634;
+  text-decoration: none;
+  -webkit-transition: border-bottom 0.2s ease;
+  -moz-transition: border-bottom 0.2s ease;
+  -o-transition: border-bottom 0.2s ease;
+  transition: border-bottom 0.2s ease;
+  border-bottom: 1px solid #e82634;
+}
+#asoplace a:visited {
+  color: #e82634;
+}
+#asoplace a:hover {
+  color: #e82634;
+  border-bottom: 1px solid transparent;
 }
