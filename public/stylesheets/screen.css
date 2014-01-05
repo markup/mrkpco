@@ -469,8 +469,8 @@ section.intro {
   }
 }
 section.intro p {
-  max-width: 325px;
-  max-width: 32.5rem;
+  max-width: 420px;
+  max-width: 42rem;
 }
 section.intro a:link {
   color: white;
