@@ -81,26 +81,36 @@ header
   left: 0
   right: 0
   z-index: 10
-  background-color: rgba(0,0,0,0.7)
+  background-color: rgba($dark-gray,0.2)
+  @include single-transition(background-color,0.25s,ease)
+  &:hover, &.top
+    background-color: rgba($dark-gray,0.87)
+    h1
+      @include rempx(width,164)
+      @include single-transition(width,0.5s,ease)
+    nav ol
+      @include rempx(margin-top,12)
   h1
     float: left
     color: transparent
     text-indent: -100000px
-    @include rempx(width,164)
+    @include rempx(width,55)
     @include rempx(height,48)
     background-image: url("../images/markup-logo.png")
+    @include single-transition(width,0.75s,ease,0)
 
 nav
   ol
     float: right
-    @include rempx(margin,12 0 0)
+    @include rempx(margin,-30 0 0)
+    @include single-transition(margin-top,0.5s,ease)
   li
     display: inline
   a
-    @include basic-link(#fff,#fff,#fff,plain)
+    @include basic-link($light-gray,$light-gray,$light-gray,plain)
     @include secondary-type
     @include rempx(padding,12 28)
-    @include single-transition(color,0.5s,ease)
+    @include single-transition(color,1s,ease)
     &:hover
       border-bottom: 1px solid transparent
       color: $cyan

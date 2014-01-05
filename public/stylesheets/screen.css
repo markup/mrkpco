@@ -120,7 +120,7 @@ a:hover {
 
 hr {
   border: none;
-  border-top: 1px solid gainsboro;
+  border-top: 1px solid #dadada;
   margin: 40px 0px 30px;
   margin: 4rem 0rem 3rem;
 }
@@ -193,23 +193,51 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(64, 64, 64, 0.2);
+  -webkit-transition: background-color 0.25s ease;
+  -moz-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+header:hover, header.top {
+  background-color: rgba(64, 64, 64, 0.87);
+}
+header:hover h1, header.top h1 {
+  width: 164px;
+  width: 16.4rem;
+  -webkit-transition: width 0.5s ease;
+  -moz-transition: width 0.5s ease;
+  -o-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+header:hover nav ol, header.top nav ol {
+  margin-top: 12px;
+  margin-top: 1.2rem;
 }
 header h1 {
   float: left;
   color: transparent;
   text-indent: -100000px;
-  width: 164px;
-  width: 16.4rem;
+  width: 55px;
+  width: 5.5rem;
   height: 48px;
   height: 4.8rem;
   background-image: url("../images/markup-logo.png");
+  -webkit-transition: width 0.75s ease;
+  -webkit-transition-delay: 0;
+  -moz-transition: width 0.75s ease 0;
+  -o-transition: width 0.75s ease 0;
+  transition: width 0.75s ease 0;
 }
 
 nav ol {
   float: right;
-  margin: 12px 0px 0px;
-  margin: 1.2rem 0rem 0rem;
+  margin: -30px 0px 0px;
+  margin: -3rem 0rem 0rem;
+  -webkit-transition: margin-top 0.5s ease;
+  -moz-transition: margin-top 0.5s ease;
+  -o-transition: margin-top 0.5s ease;
+  transition: margin-top 0.5s ease;
 }
 nav li {
   display: inline;
@@ -222,13 +250,13 @@ nav a {
   font-size: 1.2rem;
   padding: 12px 28px;
   padding: 1.2rem 2.8rem;
-  -webkit-transition: color 0.5s ease;
-  -moz-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
-  transition: color 0.5s ease;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  transition: color 1s ease;
 }
 nav a:link {
-  color: white;
+  color: #dadada;
   text-decoration: none;
   -webkit-transition: border-bottom 0.2s ease;
   -moz-transition: border-bottom 0.2s ease;
@@ -237,11 +265,11 @@ nav a:link {
   border-bottom: 1px solid transparent;
 }
 nav a:visited {
-  color: white;
+  color: #dadada;
 }
 nav a:hover {
-  color: white;
-  border-bottom: 1px solid white;
+  color: #dadada;
+  border-bottom: 1px solid #dadada;
 }
 nav a:hover {
   border-bottom: 1px solid transparent;
@@ -406,11 +434,11 @@ section.ideas h1, section.ideas p {
   color: #9bffff;
 }
 section.ideas h2 {
-  color: gainsboro;
+  color: #dadada;
   font-style: normal;
 }
 section.ideas article p {
-  color: gainsboro;
+  color: #dadada;
 }
 section.contact .left p {
   font-size: 22px;
@@ -444,7 +472,7 @@ section.contact .left p {
 
 #phive {
   background-color: black;
-  color: gainsboro;
+  color: #dadada;
 }
 #phive h2, #phive h3, #phive .highlight {
   color: #fda329;
@@ -491,7 +519,7 @@ section.contact .left p {
 
 #gridwell {
   background-color: #34251c;
-  color: gainsboro;
+  color: #dadada;
 }
 #gridwell h2, #gridwell h3, #gridwell .highlight {
   color: #9bcc25;
@@ -514,7 +542,7 @@ section.contact .left p {
 }
 
 #soloff {
-  background-color: #f6f6f6;
+  background-color: #f3f3f3;
 }
 #soloff h2, #soloff h3, #soloff .highlight {
   color: #9a0f1c;
