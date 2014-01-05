@@ -262,6 +262,9 @@ nav:target a.deactivate-menu {
     -o-transition: margin-top 0.3s ease, opacity 0.3s ease;
     transition: margin-top 0.3s ease, opacity 0.3s ease;
   }
+  nav:target {
+    height: auto;
+  }
 }
 nav ol {
   background-color: #272727;

@@ -123,6 +123,8 @@ nav
     padding: 0
     @include rempx(margin,0 0 0)
     @include transition(margin-top 0.30s ease,opacity 0.30s ease)
+    &:target
+      height: auto
   ol
     background-color: darken($dark-gray,10%)
     background-color: rgba(darken($dark-gray,10%),0.95)
