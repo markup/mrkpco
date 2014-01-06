@@ -71,13 +71,21 @@ blockquote
     @include type-size(larger)
     span
       display: block
+      font-style: italic
       @include type-size(regular)
-  img
+  figure
     float: right
     clear: none
-    width: 30%
-    margin-right: -33.333333%
+    width: 22%
+    overflow: hidden
+    @include border-radius(2px)
+    @include rempx(margin-top,18)
+    // margin-right: -33.333333%
     @include rempx(margin-bottom,20)
+    img
+      width: 100%
+      height: auto
+      display: block
   @include tablet-portrait-and-up
     max-width: none
 
