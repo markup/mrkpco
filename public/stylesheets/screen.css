@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -180,8 +181,6 @@ blockquote {
   font-size: 1.28rem;
   line-height: 21.6px;
   line-height: 2.16rem;
-  overflow: hidden;
-  *zoom: 1;
   margin-top: 33px;
   margin-top: 3.3rem;
   max-width: 460px;
@@ -189,6 +188,7 @@ blockquote {
   margin-left: auto;
   margin-right: auto;
   font-style: normal;
+  overflow: visible;
 }
 @media only screen and (min-width: 479px) {
   blockquote {
@@ -198,10 +198,15 @@ blockquote {
     line-height: 2.4rem;
   }
 }
+blockquote p {
+  position: relative;
+  z-index: 10;
+}
 @media only screen and (min-width: 479px) {
   blockquote p {
     width: 65%;
     margin-left: 0 !important;
+    float: left;
   }
 }
 @media only screen and (min-width: 767px) {
@@ -215,6 +220,40 @@ blockquote p.cite {
   clear: right;
   float: right;
   text-align: right;
+}
+blockquote p:first-of-type:before {
+  content: "“";
+  color: #dedede;
+  font-size: 200px;
+  font-size: 20rem;
+  position: absolute;
+  top: 60px;
+  top: 6rem;
+  left: -28px;
+  left: -2.8rem;
+  z-index: -1;
+}
+@media only screen and (min-width: 479px) {
+  blockquote p:first-of-type:before {
+    left: -28px;
+    left: -2.8rem;
+  }
+}
+@media only screen and (min-width: 767px) {
+  blockquote p:first-of-type:before {
+    left: -40px;
+    left: -4rem;
+  }
+}
+@media only screen and (min-width: 1023px) {
+  blockquote p:first-of-type:before {
+    left: -54px;
+    left: -5.4rem;
+  }
+}
+blockquote hr {
+  clear: both;
+  border: none;
 }
 blockquote cite {
   float: right;
