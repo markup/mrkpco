@@ -635,7 +635,6 @@ section.work article figure {
   max-height: 400px;
   background-size: 60%;
   background-attachment: fixed;
-  background-position: left top;
   background-repeat: no-repeat;
 }
 section.work article figure img {
@@ -650,7 +649,6 @@ section.work article figure img {
     position: absolute;
     top: 0;
     bottom: 0;
-    float: left;
     width: 60%;
     max-height: none;
   }
@@ -685,6 +683,10 @@ section.work article .highlight {
   section.work article.right-layout .container p, section.work article.right-layout .container hgroup {
     margin-left: 18px;
   }
+  section.work article.right-layout figure {
+    left: 0;
+    background-position: left 48px;
+  }
 }
 @media only screen and (min-width: 767px) {
   section.work article.left-layout p, section.work article.left-layout hgroup {
@@ -702,6 +704,10 @@ section.work article .highlight {
     float: right;
     clear: right;
     margin-right: 18px;
+  }
+  section.work article.left-layout figure {
+    right: 0;
+    background-position: right 48px;
   }
 }
 @media only screen and (min-width: 767px) {
@@ -853,6 +859,10 @@ section.contact .left p {
   color: #bb0e29;
   border-bottom: 1px solid transparent;
 }
+#sow figure {
+  max-height: none;
+  background-image: url("/images/work_society.jpg");
+}
 
 #gridwell {
   background-color: #34251c;
@@ -876,6 +886,9 @@ section.contact .left p {
 #gridwell a:hover {
   color: #9bcc25;
   border-bottom: 1px solid transparent;
+}
+#gridwell figure {
+  background-image: url("/images/work_gridwell.jpg");
 }
 
 #soloff {

@@ -290,7 +290,6 @@ section
         max-height: 400px
         background-size: 60%
         background-attachment: fixed
-        background-position: left top
         background-repeat: no-repeat
         img
           max-width: 1058px
@@ -302,7 +301,6 @@ section
           position: absolute
           top: 0
           bottom: 0
-          float: left
           width: 60%
           max-height: none
           img
@@ -321,6 +319,9 @@ section
             margin-right: 2%
             p, hgroup
               margin-left: 18px
+          figure
+            left: 0
+            background-position: left 48px
       &.left-layout
         @include tablet-portrait-and-up
           p, hgroup
@@ -335,6 +336,9 @@ section
               float: right
               clear: right
               margin-right: 18px
+          figure
+            right: 0
+            background-position: right 48px
       &.center-layout
         @include tablet-portrait-and-up
           .container
@@ -419,6 +423,9 @@ section
     color: $sow-fore
   a
     @include basic-link($sow-fore)
+  figure
+    max-height: none
+    background-image: url("/images/work_society.jpg")
 
 #gridwell
   background-color: $gridwell-back
@@ -427,6 +434,8 @@ section
     color: $gridwell-fore
   a
     @include basic-link($gridwell-fore)
+  figure
+    background-image: url("/images/work_gridwell.jpg")
 
 #soloff
   background-color: $soloff-back
