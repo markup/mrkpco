@@ -522,6 +522,10 @@ section {
 }
 section.intro {
   background-color: #404040;
+  background-image: url("/images/building_fpo.jpg");
+  background-position: center -200px;
+  background-size: cover;
+  background-attachment: fixed;
   color: #9bffff;
   font-size: 17.6px;
   font-size: 1.76rem;
@@ -603,8 +607,6 @@ section.work h1 {
   display: none;
 }
 section.work article {
-  padding: 90px 18px;
-  padding: 9rem 1.8rem;
   overflow: hidden;
   *zoom: 1;
 }
@@ -613,6 +615,11 @@ section.work article p, section.work article hgroup {
   max-width: 46rem;
   margin-left: auto;
   margin-right: auto;
+  z-index: 10;
+}
+section.work article .container {
+  padding: 90px 18px;
+  padding: 9rem 1.8rem;
 }
 section.work article .highlight {
   font-size: 17.6px;
@@ -630,10 +637,8 @@ section.work article .highlight {
 }
 @media only screen and (min-width: 767px) {
   section.work article.right-layout p, section.work article.right-layout hgroup {
-    width: 310px;
-    width: 31rem;
-    float: right;
-    clear: right;
+    max-width: 310px;
+    max-width: 31rem;
   }
 }
 @media only screen and (min-width: 767px) {
@@ -712,6 +717,7 @@ section.contact .left p {
 }
 
 #wfgc {
+  position: relative;
   background-color: #fdcfa1;
 }
 #wfgc h2, #wfgc h3, #wfgc .highlight {
@@ -733,10 +739,57 @@ section.contact .left p {
   color: #f0573d;
   border-bottom: 1px solid transparent;
 }
+#wfgc .container {
+  padding-top: 40px;
+}
+@media only screen and (min-width: 767px) {
+  #wfgc .container {
+    padding: 90px 0;
+    position: relative;
+    width: 38%;
+    margin-right: 2%;
+    float: right;
+  }
+  #wfgc .container p, #wfgc .container hgroup {
+    margin-left: 18px;
+  }
+}
+#wfgc figure {
+  overflow: hidden;
+  max-height: 400px;
+  background-image: url("/images/work_wfgc.jpg");
+  background-size: 60%;
+  background-attachment: fixed;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+#wfgc figure img {
+  max-width: 1058px;
+  width: 100%;
+  float: right;
+  visibility: visible;
+  display: block;
+}
+@media only screen and (min-width: 767px) {
+  #wfgc figure {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    float: left;
+    width: 60%;
+    max-height: none;
+  }
+  #wfgc figure img {
+    visibility: hidden;
+  }
+}
 
 #phive {
   background-color: black;
   color: #dedede;
+  background-image: url("/images/work_paperhive.jpg");
+  background-position: center top;
+  background-size: cover;
 }
 #phive h2, #phive h3, #phive .highlight {
   color: #fda329;
