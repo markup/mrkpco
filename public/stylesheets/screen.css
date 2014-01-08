@@ -198,9 +198,16 @@ blockquote {
     line-height: 2.4rem;
   }
 }
-blockquote p {
-  width: 75%;
-  margin-left: 0 !important;
+@media only screen and (min-width: 479px) {
+  blockquote p {
+    width: 65%;
+    margin-left: 0 !important;
+  }
+}
+@media only screen and (min-width: 767px) {
+  blockquote p {
+    width: 75%;
+  }
 }
 blockquote p.cite {
   width: 100%;
@@ -242,9 +249,8 @@ blockquote cite span {
   }
 }
 blockquote figure {
-  float: right;
-  clear: none;
-  width: 22%;
+  width: 100%;
+  height: auto;
   overflow: hidden;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -255,6 +261,18 @@ blockquote figure {
   margin-top: 1.8rem;
   margin-bottom: 20px;
   margin-bottom: 2rem;
+}
+@media only screen and (min-width: 479px) {
+  blockquote figure {
+    float: right;
+    clear: none;
+    width: 33%;
+  }
+}
+@media only screen and (min-width: 767px) {
+  blockquote figure {
+    width: 22%;
+  }
 }
 blockquote figure img {
   width: 100%;
