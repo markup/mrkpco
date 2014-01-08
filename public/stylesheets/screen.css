@@ -525,7 +525,6 @@ section.intro {
   background-image: url("/images/building_fpo.jpg");
   background-position: center -200px;
   background-size: cover;
-  background-attachment: fixed;
   color: #9bffff;
   font-size: 17.6px;
   font-size: 1.76rem;
@@ -607,6 +606,7 @@ section.work h1 {
   display: none;
 }
 section.work article {
+  position: relative;
   overflow: hidden;
   *zoom: 1;
 }
@@ -618,8 +618,45 @@ section.work article p, section.work article hgroup {
   z-index: 10;
 }
 section.work article .container {
-  padding: 90px 18px;
-  padding: 9rem 1.8rem;
+  padding: 40px 18px 90px;
+  padding: 4rem 1.8rem 9rem;
+}
+@media only screen and (min-width: 767px) {
+  section.work article .container {
+    padding: 90px 0px;
+    padding: 9rem 0rem;
+    position: relative;
+    overflow: hidden;
+    *zoom: 1;
+  }
+}
+section.work article figure {
+  overflow: hidden;
+  max-height: 400px;
+  background-size: 60%;
+  background-attachment: fixed;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+section.work article figure img {
+  max-width: 1058px;
+  width: 100%;
+  float: right;
+  visibility: visible;
+  display: block;
+}
+@media only screen and (min-width: 767px) {
+  section.work article figure {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    float: left;
+    width: 60%;
+    max-height: none;
+  }
+  section.work article figure img {
+    visibility: hidden;
+  }
 }
 section.work article .highlight {
   font-size: 17.6px;
@@ -640,6 +677,14 @@ section.work article .highlight {
     max-width: 310px;
     max-width: 31rem;
   }
+  section.work article.right-layout .container {
+    float: right;
+    width: 38%;
+    margin-right: 2%;
+  }
+  section.work article.right-layout .container p, section.work article.right-layout .container hgroup {
+    margin-left: 18px;
+  }
 }
 @media only screen and (min-width: 767px) {
   section.work article.left-layout p, section.work article.left-layout hgroup {
@@ -647,6 +692,23 @@ section.work article .highlight {
     width: 31rem;
     float: left;
     clear: left;
+  }
+  section.work article.left-layout .container {
+    float: left;
+    width: 38%;
+    margin-left: 2%;
+  }
+  section.work article.left-layout .container p, section.work article.left-layout .container hgroup {
+    float: right;
+    clear: right;
+    margin-right: 18px;
+  }
+}
+@media only screen and (min-width: 767px) {
+  section.work article.center-layout .container {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 section.collaborators, section.ideas, section.contact {
@@ -717,7 +779,6 @@ section.contact .left p {
 }
 
 #wfgc {
-  position: relative;
   background-color: #fdcfa1;
 }
 #wfgc h2, #wfgc h3, #wfgc .highlight {
@@ -739,49 +800,8 @@ section.contact .left p {
   color: #f0573d;
   border-bottom: 1px solid transparent;
 }
-#wfgc .container {
-  padding-top: 40px;
-}
-@media only screen and (min-width: 767px) {
-  #wfgc .container {
-    padding: 90px 0;
-    position: relative;
-    width: 38%;
-    margin-right: 2%;
-    float: right;
-  }
-  #wfgc .container p, #wfgc .container hgroup {
-    margin-left: 18px;
-  }
-}
 #wfgc figure {
-  overflow: hidden;
-  max-height: 400px;
   background-image: url("/images/work_wfgc.jpg");
-  background-size: 60%;
-  background-attachment: fixed;
-  background-position: left top;
-  background-repeat: no-repeat;
-}
-#wfgc figure img {
-  max-width: 1058px;
-  width: 100%;
-  float: right;
-  visibility: visible;
-  display: block;
-}
-@media only screen and (min-width: 767px) {
-  #wfgc figure {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    float: left;
-    width: 60%;
-    max-height: none;
-  }
-  #wfgc figure img {
-    visibility: hidden;
-  }
 }
 
 #phive {

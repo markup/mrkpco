@@ -240,7 +240,7 @@ section
     background-image: url("/images/building_fpo.jpg")
     background-position: center -200px
     background-size: cover
-    background-attachment: fixed
+    // background-attachment: fixed
     color: $cyan
     @include type-size(larger)
     @include rempx(padding-top,130)
@@ -272,6 +272,7 @@ section
     h1
       display: none
     article
+      position: relative
       @include clearfix
       p, hgroup
         @include rempx(max-width,460)
@@ -279,7 +280,33 @@ section
         margin-right: auto
         z-index: 10
       .container
-        @include rempx(padding,90 18)
+        @include rempx(padding,40 18 90)
+        @include tablet-portrait-and-up
+          @include rempx(padding,90 0)
+          position: relative
+          @include clearfix
+      figure
+        overflow: hidden
+        max-height: 400px
+        background-size: 60%
+        background-attachment: fixed
+        background-position: left top
+        background-repeat: no-repeat
+        img
+          max-width: 1058px
+          width: 100%
+          float: right
+          visibility: visible
+          display: block
+        @include tablet-portrait-and-up
+          position: absolute
+          top: 0
+          bottom: 0
+          float: left
+          width: 60%
+          max-height: none
+          img
+            visibility: hidden
       .highlight
         @include type-size(larger)
       &.right-layout
@@ -288,13 +315,32 @@ section
             @include rempx(max-width,310)
             // float: right
             // clear: right
+          .container
+            float: right
+            width: 38%
+            margin-right: 2%
+            p, hgroup
+              margin-left: 18px
       &.left-layout
         @include tablet-portrait-and-up
           p, hgroup
             @include rempx(width,310)
             float: left
             clear: left
+          .container
+            float: left
+            width: 38%
+            margin-left: 2%
+            p, hgroup
+              float: right
+              clear: right
+              margin-right: 18px
       &.center-layout
+        @include tablet-portrait-and-up
+          .container
+            float: none
+            margin-left: auto
+            margin-right: auto
   &.collaborators, &.ideas, &.contact
     @include type-size(larger)
     p, h1, article
@@ -331,49 +377,13 @@ section
 
 
 #wfgc
-  position: relative
   background-color: $wfgc-back
   h2, h3, .highlight
     color: $wfgc-fore
   a
     @include basic-link($wfgc-fore)
-  .container
-    padding-top: 40px
-    @include tablet-portrait-and-up
-      padding: 90px 0
-      position: relative
-      // @include clearfix
-      width: 38%
-      margin-right: 2%
-      float: right
-      // z-index: 10
-      p, hgroup
-        margin-left: 18px
-        // width: auto
   figure
-    overflow: hidden
-    max-height: 400px
     background-image: url("/images/work_wfgc.jpg")
-    // background-color: #fff
-    background-size: 60%
-    background-attachment: fixed
-    background-position: left top
-    background-repeat: no-repeat
-    img
-      max-width: 1058px
-      width: 100%
-      float: right
-      visibility: visible
-      display: block
-    @include tablet-portrait-and-up
-      position: absolute
-      top: 0
-      bottom: 0
-      float: left
-      width: 60%
-      max-height: none
-      img
-        visibility: hidden
 
   // &:before
   //   content: " "
