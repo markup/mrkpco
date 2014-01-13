@@ -616,6 +616,7 @@ section.work article p, section.work article hgroup {
   margin-left: auto;
   margin-right: auto;
   z-index: 10;
+  clear: both;
 }
 section.work article .container {
   padding: 40px 18px 90px;
@@ -630,30 +631,169 @@ section.work article .container {
     *zoom: 1;
   }
 }
-section.work article figure {
-  overflow: hidden;
-  max-height: 400px;
-  background-size: 60%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-section.work article figure img {
-  max-width: 1058px;
+section.work article .showcase {
   width: 100%;
-  float: right;
-  visibility: visible;
-  display: block;
 }
 @media only screen and (min-width: 767px) {
-  section.work article figure {
+  section.work article .showcase {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 60%;
-    max-height: none;
   }
-  section.work article figure img {
-    visibility: hidden;
+}
+section.work article figure {
+  display: block;
+  position: relative;
+  -webkit-transition: margin 0.35s ease, width 0.35s ease;
+  -moz-transition: margin 0.35s ease, width 0.35s ease;
+  -o-transition: margin 0.35s ease, width 0.35s ease;
+  transition: margin 0.35s ease, width 0.35s ease;
+}
+section.work article figure::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+}
+section.work article figure .mask {
+  overflow-x: hidden;
+  overflow-y: auto !important;
+  border: 1px solid #ededed;
+}
+section.work article figure .mask::-webkit-scrollbar {
+  display: none;
+}
+section.work article figure .mask img {
+  display: block;
+  width: 100%;
+}
+section.work article figure.laptop {
+  position: relative;
+  overflow: hidden;
+  width: 92%;
+  margin: 6% auto;
+}
+section.work article figure.laptop .dummy {
+  width: 100%;
+  height: 0;
+  margin-top: 58%;
+}
+section.work article figure.laptop .dummy-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+section.work article figure.laptop .mask {
+  height: 80%;
+  width: 74%;
+  margin: 2.9% auto;
+}
+section.work article figure.laptop .mask img {
+  display: block;
+  width: 100%;
+}
+section.work article figure.laptop::before {
+  background-image: url("/images/devices_laptop.png");
+}
+@media only screen and (min-width: 767px) {
+  section.work article figure.laptop {
+    width: 94%;
+    margin-left: 19%;
+    margin-right: 0;
+    float: right;
+    margin-top: 90px;
+    margin-top: 9rem;
+    max-width: 1000px;
+    max-width: 100rem;
+  }
+}
+@media only screen and (min-width: 1023px) {
+  section.work article figure.laptop {
+    margin-bottom: -10%;
+  }
+}
+section.work article figure.tablet {
+  position: relative;
+  overflow: hidden;
+  width: 36%;
+  margin: -30% 0 0 24%;
+  float: left;
+}
+section.work article figure.tablet .dummy {
+  width: 100%;
+  height: 0;
+  margin-top: 180%;
+}
+section.work article figure.tablet .dummy-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+section.work article figure.tablet .mask {
+  height: 76%;
+  width: 84%;
+  margin: 12% auto;
+}
+section.work article figure.tablet::before {
+  background-image: url("/images/devices_tablet.png");
+}
+@media only screen and (min-width: 767px) {
+  section.work article figure.tablet {
+    width: 34%;
+    max-width: 380px;
+    max-width: 38rem;
+  }
+}
+@media only screen and (min-width: 1023px) {
+  section.work article figure.tablet {
+    margin-top: -19%;
+    margin-right: 12%;
+  }
+}
+section.work article figure.phone {
+  position: relative;
+  overflow: hidden;
+  width: 24%;
+  margin: -16% -20%;
+}
+section.work article figure.phone .dummy {
+  width: 100%;
+  height: 0;
+  margin-top: 180%;
+}
+section.work article figure.phone .dummy-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+section.work article figure.phone .mask {
+  height: 76%;
+  width: 84%;
+  margin: 18% auto;
+}
+section.work article figure.phone::before {
+  background-image: url("/images/devices_phone.png");
+}
+@media only screen and (min-width: 767px) {
+  section.work article figure.phone {
+    width: 28%;
+    max-width: 240px;
+    max-width: 24rem;
   }
 }
 section.work article .highlight {
@@ -683,9 +823,27 @@ section.work article .highlight {
   section.work article.right-layout .container p, section.work article.right-layout .container hgroup {
     margin-left: 18px;
   }
-  section.work article.right-layout figure {
+  section.work article.right-layout .showcase {
     left: 0;
-    background-position: left 48px;
+  }
+  section.work article.right-layout figure.tablet {
+    margin: -30% 0 0 24%;
+    float: left;
+  }
+  section.work article.right-layout figure.phone {
+    margin: -16% -20%;
+  }
+}
+@media only screen and (min-width: 767px) and (min-width: 767px) {
+  section.work article.right-layout figure.laptop {
+    margin-left: 19%;
+    margin-right: 0;
+    float: right;
+  }
+}
+@media only screen and (min-width: 767px) and (min-width: 1023px) {
+  section.work article.right-layout figure.tablet {
+    margin-right: 12%;
   }
 }
 @media only screen and (min-width: 767px) {
@@ -705,9 +863,32 @@ section.work article .highlight {
     clear: right;
     margin-right: 18px;
   }
-  section.work article.left-layout figure {
+  section.work article.left-layout .showcase {
     right: 0;
-    background-position: right 48px;
+  }
+  section.work article.left-layout figure.tablet {
+    margin: -20% 24% 0 0;
+    float: right;
+  }
+  section.work article.left-layout figure.phone {
+    margin: -16% -20% 0 55%;
+  }
+}
+@media only screen and (min-width: 767px) and (min-width: 767px) {
+  section.work article.left-layout figure.laptop {
+    margin-right: 19%;
+    margin-left: 0;
+    float: left;
+  }
+}
+@media only screen and (min-width: 767px) and (min-width: 1023px) {
+  section.work article.left-layout figure.tablet {
+    margin-left: 12%;
+  }
+}
+@media only screen and (min-width: 767px) and (min-width: 767px) {
+  section.work article.left-layout figure.phone {
+    margin-left: 65%;
   }
 }
 @media only screen and (min-width: 767px) {
@@ -806,9 +987,6 @@ section.contact .left p {
   color: #f0573d;
   border-bottom: 1px solid transparent;
 }
-#wfgc figure {
-  background-image: url("/images/work_wfgc.jpg");
-}
 
 #phive {
   background-color: black;
@@ -859,9 +1037,8 @@ section.contact .left p {
   color: #bb0e29;
   border-bottom: 1px solid transparent;
 }
-#sow figure {
-  max-height: none;
-  background-image: url("/images/work_society.jpg");
+#sow figure .mask {
+  background-color: #a9dde3;
 }
 
 #gridwell {

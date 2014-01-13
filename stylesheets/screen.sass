@@ -279,49 +279,127 @@ section
         margin-left: auto
         margin-right: auto
         z-index: 10
+        clear: both
       .container
         @include rempx(padding,40 18 90)
         @include tablet-portrait-and-up
           @include rempx(padding,90 0)
           position: relative
           @include clearfix
-      figure
-        overflow: hidden
-        max-height: 400px
-        background-size: 60%
-        background-attachment: fixed
-        background-repeat: no-repeat
-        img
-          max-width: 1058px
-          width: 100%
-          float: right
-          visibility: visible
-          display: block
+      .showcase
+        width: 100%
         @include tablet-portrait-and-up
           position: absolute
           top: 0
           bottom: 0
           width: 60%
-          max-height: none
+      figure
+        display: block
+        position: relative
+        @include transition(margin 0.35s ease, width 0.35s ease)
+        // top: 4%
+        // left: 0
+        // right: 0
+        &::before
+          content: " "
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center top
+        .mask
+          overflow-x: hidden
+          overflow-y: auto !important
+          border: 1px solid #ededed
+          &::-webkit-scrollbar
+            display: none
           img
-            visibility: hidden
+            display: block
+            width: 100%
+        &.laptop
+          @include proportional-magic(58%)
+          width: 92%
+          margin: 6% auto
+          .mask
+            height: 80%
+            width: 74%
+            margin: 2.9% auto
+            img
+              display: block
+              width: 100%
+          &::before
+            background-image: url("/images/devices_laptop.png")
+          @include tablet-portrait-and-up
+            width: 94%
+            margin-left: 19%
+            margin-right: 0
+            float: right
+            @include rempx(margin-top,90)
+            @include rempx(max-width,1000)
+          @include tablet-landscape-and-up
+            margin-bottom: -10%
+        &.tablet
+          @include proportional-magic(180%)
+          // position: absolute
+          width: 36%
+          margin: -30% 0 0 24%
+          float: left
+          .mask
+            height: 76%
+            width: 84%
+            margin: 12% auto
+          &::before
+            background-image: url("/images/devices_tablet.png")
+          @include tablet-portrait-and-up
+            width: 34%
+            @include rempx(max-width,380)
+          @include tablet-landscape-and-up
+            margin-top: -19%
+            margin-right: 12%
+        &.phone
+          @include proportional-magic(180%)
+          // position: absolute
+          width: 24%
+          margin: -16% -20%
+          .mask
+            height: 76%
+            width: 84%
+            margin: 18% auto
+          &::before
+            background-image: url("/images/devices_phone.png")
+          @include tablet-portrait-and-up
+            width: 28%
+            @include rempx(max-width,240)
       .highlight
         @include type-size(larger)
       &.right-layout
         @include tablet-portrait-and-up
           p, hgroup
             @include rempx(max-width,310)
-            // float: right
-            // clear: right
           .container
             float: right
             width: 38%
             margin-right: 2%
             p, hgroup
               margin-left: 18px
-          figure
+          .showcase
             left: 0
-            background-position: left 48px
+          figure
+            &.laptop
+              @include tablet-portrait-and-up
+                margin-left: 19%
+                margin-right: 0
+                float: right
+            &.tablet
+              margin: -30% 0 0 24%
+              float: left
+              @include tablet-landscape-and-up
+                margin-right: 12%
+            &.phone
+              margin: -16% -20%
       &.left-layout
         @include tablet-portrait-and-up
           p, hgroup
@@ -336,9 +414,23 @@ section
               float: right
               clear: right
               margin-right: 18px
-          figure
+          .showcase
             right: 0
-            background-position: right 48px
+          figure
+            &.laptop
+              @include tablet-portrait-and-up
+                margin-right: 19%
+                margin-left: 0
+                float: left
+            &.tablet
+              margin: -20% 24% 0 0
+              float: right
+              @include tablet-landscape-and-up
+                margin-left: 12%
+            &.phone
+              margin: -16% -20% 0 55%
+              @include tablet-portrait-and-up
+                margin-left: 65%
       &.center-layout
         @include tablet-portrait-and-up
           .container
@@ -386,8 +478,6 @@ section
     color: $wfgc-fore
   a
     @include basic-link($wfgc-fore)
-  figure
-    background-image: url("/images/work_wfgc.jpg")
 
   // &:before
   //   content: " "
@@ -424,8 +514,8 @@ section
   a
     @include basic-link($sow-fore)
   figure
-    max-height: none
-    background-image: url("/images/work_society.jpg")
+    .mask
+      background-color: $sow-back
 
 #gridwell
   background-color: $gridwell-back
