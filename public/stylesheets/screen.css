@@ -522,16 +522,21 @@ section {
 }
 section.intro {
   background-color: #404040;
-  background-image: url("/images/building_fpo.jpg");
-  background-position: center -200px;
+  background-image: url("/images/Alfonso.jpg");
+  background-position: 70% top;
   background-size: cover;
+  background-repeat: no-repeat;
   color: #9bffff;
   font-size: 17.6px;
   font-size: 1.76rem;
   line-height: 25.2px;
   line-height: 2.52rem;
-  padding-top: 130px;
-  padding-top: 13rem;
+  padding-top: 300px;
+  padding-top: 30rem;
+  -webkit-transition: background-position-y 0.35s ease, padding-top 0.35s ease;
+  -moz-transition: background-position-y 0.35s ease, padding-top 0.35s ease;
+  -o-transition: background-position-y 0.35s ease, padding-top 0.35s ease;
+  transition: background-position-y 0.35s ease, padding-top 0.35s ease;
 }
 @media only screen and (min-width: 479px) {
   section.intro {
@@ -560,6 +565,18 @@ section.intro a:visited {
 section.intro a:hover {
   color: white;
   border-bottom: 1px solid transparent;
+}
+@media only screen and (min-width: 1023px) {
+  section.intro {
+    background-position: center -80px;
+    padding-top: 130px;
+    padding-top: 13rem;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  section.intro {
+    background-position: center -100px;
+  }
 }
 section.philosophy {
   font-size: 17.6px;

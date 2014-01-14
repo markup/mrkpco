@@ -237,17 +237,24 @@ section
   @include rempx(padding,90 18)
   &.intro
     background-color: $dark-gray
-    background-image: url("/images/building_fpo.jpg")
-    background-position: center -200px
+    background-image: url("/images/Alfonso.jpg")
+    background-position: 70% top
     background-size: cover
+    background-repeat: no-repeat
     // background-attachment: fixed
     color: $cyan
     @include type-size(larger)
-    @include rempx(padding-top,130)
+    @include rempx(padding-top,300)
+    @include transition(background-position-y 0.35s ease, padding-top 0.35s ease)
     p
       @include rempx(max-width,420)
     a
       @include basic-link(#fff,#fff,#fff)
+    @include tablet-landscape-and-up
+      background-position: center -80px
+      @include rempx(padding-top,130)
+    @include desktop-and-up
+      background-position: center -100px
   &.philosophy
     @include type-size(larger)
     p, h1
