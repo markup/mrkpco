@@ -1196,6 +1196,9 @@ section.contact .left p {
 
 #soloff {
   background-color: #f8f8f8;
+  background-image: url("/images/work_soloff.jpg");
+  background-position: center top;
+  background-size: cover;
 }
 #soloff h2, #soloff h3, #soloff .highlight {
   color: #9a0f1c;
