@@ -531,8 +531,8 @@ section.intro {
   font-size: 1.76rem;
   line-height: 25.2px;
   line-height: 2.52rem;
-  padding-top: 300px;
-  padding-top: 30rem;
+  padding-top: 230px;
+  padding-top: 23rem;
   -webkit-transition: background-position-y 0.35s ease, padding-top 0.35s ease;
   -moz-transition: background-position-y 0.35s ease, padding-top 0.35s ease;
   -o-transition: background-position-y 0.35s ease, padding-top 0.35s ease;
@@ -568,12 +568,16 @@ section.intro a:hover {
 }
 @media only screen and (min-width: 1023px) {
   section.intro {
-    background-position: center -80px;
     padding-top: 130px;
     padding-top: 13rem;
   }
 }
 @media only screen and (min-width: 1025px) {
+  section.intro {
+    background-position: center -30px;
+  }
+}
+@media only screen and (min-width: 1700px) {
   section.intro {
     background-position: center -100px;
   }
