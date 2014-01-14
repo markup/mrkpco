@@ -500,6 +500,16 @@ section
       p
         @include type-size(larger)
 
+.launch-project
+  display: block
+  text-align: center
+  font-style: normal
+  @include secondary-type
+  font-size: 1.4em
+  border: none !important
+  color: white
+  @include border-radius(2px)
+  @include rempx(padding,18 0)
 
 #wfgc
   background-color: $wfgc-back
@@ -509,6 +519,12 @@ section
     @include basic-link($wfgc-fore)
   .scroll::after
     color: rgba($wfgc-fore,0.6)
+  a.launch-project
+    color: $wfgc-back !important
+    background-color: $wfgc-fore
+    @include transition(color 0.35s ease)
+    &:hover
+      color: #fff !important
 
 #phive
   background-color: #000
@@ -520,6 +536,12 @@ section
     color: $phive
   a
     @include basic-link($phive)
+  a.launch-project
+    color: #000 !important
+    background-color: $phive
+    @include transition(color 0.35s ease)
+    &:hover
+      color: #fff !important
 
 #sow
   background-color: $sow-back
@@ -529,8 +551,12 @@ section
     @include basic-link($sow-fore)
   .mask
     background-color: $sow-back
-  .scroll::after
-    // color: rgba($sow-fore,0.6)
+  a.launch-project
+    color: $sow-back !important
+    background-color: $sow-fore
+    @include transition(color 0.35s ease)
+    &:hover
+      color: #fff !important
 
 #gridwell
   background-color: $gridwell-back
@@ -541,6 +567,12 @@ section
     @include basic-link($gridwell-fore)
   figure
     background-image: url("/images/work_gridwell.jpg")
+  a.launch-project
+    color: $gridwell-back !important
+    background-color: $gridwell-fore
+    @include transition(color 0.35s ease)
+    &:hover
+      color: #000 !important
 
 #soloff
   background-color: $soloff-back
@@ -548,6 +580,12 @@ section
     color: $soloff-fore
   a
     @include basic-link($soloff-fore)
+  a.launch-project
+    color: $soloff-back !important
+    background-color: $soloff-fore
+    @include transition(color 0.35s ease)
+    &:hover
+      color: #bbb !important
 
 #asoplace
   background-color: $asoplace-back

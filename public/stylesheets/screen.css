@@ -1006,6 +1006,27 @@ section.contact .left p {
   }
 }
 
+.launch-project {
+  display: block;
+  text-align: center;
+  font-style: normal;
+  font-family: "brandon-grotesque", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-size: 1.4em;
+  border: none !important;
+  color: white;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  padding: 18px 0px;
+  padding: 1.8rem 0rem;
+}
+
 #wfgc {
   background-color: #fdcfa1;
 }
@@ -1030,6 +1051,17 @@ section.contact .left p {
 }
 #wfgc .scroll::after {
   color: rgba(240, 87, 61, 0.6);
+}
+#wfgc a.launch-project {
+  color: #fdcfa1 !important;
+  background-color: #f0573d;
+  -webkit-transition: color 0.35s ease;
+  -moz-transition: color 0.35s ease;
+  -o-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+}
+#wfgc a.launch-project:hover {
+  color: white !important;
 }
 
 #phive {
@@ -1058,6 +1090,17 @@ section.contact .left p {
   color: #fda329;
   border-bottom: 1px solid transparent;
 }
+#phive a.launch-project {
+  color: black !important;
+  background-color: #fda329;
+  -webkit-transition: color 0.35s ease;
+  -moz-transition: color 0.35s ease;
+  -o-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+}
+#phive a.launch-project:hover {
+  color: white !important;
+}
 
 #sow {
   background-color: #a9dde3;
@@ -1083,6 +1126,17 @@ section.contact .left p {
 }
 #sow .mask {
   background-color: #a9dde3;
+}
+#sow a.launch-project {
+  color: #a9dde3 !important;
+  background-color: #bb0e29;
+  -webkit-transition: color 0.35s ease;
+  -moz-transition: color 0.35s ease;
+  -o-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+}
+#sow a.launch-project:hover {
+  color: white !important;
 }
 
 #gridwell {
@@ -1111,6 +1165,17 @@ section.contact .left p {
 #gridwell figure {
   background-image: url("/images/work_gridwell.jpg");
 }
+#gridwell a.launch-project {
+  color: #34251c !important;
+  background-color: #9bcc25;
+  -webkit-transition: color 0.35s ease;
+  -moz-transition: color 0.35s ease;
+  -o-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+}
+#gridwell a.launch-project:hover {
+  color: black !important;
+}
 
 #soloff {
   background-color: #f8f8f8;
@@ -1133,6 +1198,17 @@ section.contact .left p {
 #soloff a:hover {
   color: #9a0f1c;
   border-bottom: 1px solid transparent;
+}
+#soloff a.launch-project {
+  color: #f8f8f8 !important;
+  background-color: #9a0f1c;
+  -webkit-transition: color 0.35s ease;
+  -moz-transition: color 0.35s ease;
+  -o-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+}
+#soloff a.launch-project:hover {
+  color: #bbbbbb !important;
 }
 
 #asoplace {
