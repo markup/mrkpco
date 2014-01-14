@@ -128,7 +128,7 @@ header
   top: 0
   left: 0
   right: 0
-  z-index: 10
+  z-index: 20
   background-color: darken($dark-gray,10%)
   background-color: rgba(darken($dark-gray,10%),0.95)
   @include rempx(min-height,48)
@@ -310,15 +310,44 @@ section
           background-repeat: no-repeat
           background-size: contain
           background-position: center top
+          z-index: 10
         .mask
           overflow-x: hidden
-          overflow-y: auto !important
+          overflow-y: hidden
           border: 1px solid #ededed
+          position: relative
+          z-index: 10
           &::-webkit-scrollbar
             display: none
           img
             display: block
             width: 100%
+            z-index: 5
+          @include mobile-landscape-and-up
+            overflow-y: auto !important
+        &.scroll
+          @include mobile-landscape-and-up
+            &::after
+              content: "⇕"
+              color: rgba(#fff,0.8)
+              text-align: center
+              font-weight: bold
+              @include rempx(font-size,72)
+              @include rempx(padding-top,70)
+              font-style: normal
+              position: absolute
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+              z-index: 10
+              @include transition(color 0.35s ease,z-index 0s ease)
+        &:hover
+          &.scroll
+            &::after
+              color: transparent !important
+              z-index: 0
+              @include transition(color 0.35s ease,z-index 0s ease 0.35s)
         &.laptop
           @include proportional-magic(58%)
           width: 92%
@@ -478,23 +507,8 @@ section
     color: $wfgc-fore
   a
     @include basic-link($wfgc-fore)
-
-  // &:before
-  //   content: " "
-  //   background-color: $dark-gray
-  //   position: absolute
-  //   top: 0
-  //   left: 0
-  //   bottom: 0
-  //   width: 100%
-  //   z-index: 0
-  //   background-image: url("/images/work_wfgc.jpg")
-  //   background-size: cover
-  //   background-attachment: fixed
-  //   background-position: center top
-  //   @include tablet-portrait-and-up
-  //     right: 30%
-  //     max-width: 1077px
+  .scroll::after
+    color: rgba($wfgc-fore,0.6)
 
 #phive
   background-color: #000
@@ -513,9 +527,10 @@ section
     color: $sow-fore
   a
     @include basic-link($sow-fore)
-  figure
-    .mask
-      background-color: $sow-back
+  .mask
+    background-color: $sow-back
+  .scroll::after
+    // color: rgba($sow-fore,0.6)
 
 #gridwell
   background-color: $gridwell-back

@@ -336,7 +336,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 20;
   background-color: #272727;
   background-color: rgba(39, 39, 39, 0.95);
   min-height: 48px;
@@ -660,11 +660,14 @@ section.work article figure::before {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center top;
+  z-index: 10;
 }
 section.work article figure .mask {
   overflow-x: hidden;
-  overflow-y: auto !important;
+  overflow-y: hidden;
   border: 1px solid #ededed;
+  position: relative;
+  z-index: 10;
 }
 section.work article figure .mask::-webkit-scrollbar {
   display: none;
@@ -672,6 +675,44 @@ section.work article figure .mask::-webkit-scrollbar {
 section.work article figure .mask img {
   display: block;
   width: 100%;
+  z-index: 5;
+}
+@media only screen and (min-width: 479px) {
+  section.work article figure .mask {
+    overflow-y: auto !important;
+  }
+}
+@media only screen and (min-width: 479px) {
+  section.work article figure.scroll::after {
+    content: "⇕";
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-weight: bold;
+    font-size: 72px;
+    font-size: 7.2rem;
+    padding-top: 70px;
+    padding-top: 7rem;
+    font-style: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    -webkit-transition: color 0.35s ease, z-index 0s ease;
+    -moz-transition: color 0.35s ease, z-index 0s ease;
+    -o-transition: color 0.35s ease, z-index 0s ease;
+    transition: color 0.35s ease, z-index 0s ease;
+  }
+}
+section.work article figure:hover.scroll::after {
+  color: transparent !important;
+  z-index: 0;
+  -webkit-transition: color 0.35s ease, z-index 0s ease;
+  -webkit-transition-delay: 0s, 0.35s;
+  -moz-transition: color 0.35s ease, z-index 0s ease 0.35s;
+  -o-transition: color 0.35s ease, z-index 0s ease 0.35s;
+  transition: color 0.35s ease, z-index 0s ease 0.35s;
 }
 section.work article figure.laptop {
   position: relative;
@@ -987,6 +1028,9 @@ section.contact .left p {
   color: #f0573d;
   border-bottom: 1px solid transparent;
 }
+#wfgc .scroll::after {
+  color: rgba(240, 87, 61, 0.6);
+}
 
 #phive {
   background-color: black;
@@ -1037,7 +1081,7 @@ section.contact .left p {
   color: #bb0e29;
   border-bottom: 1px solid transparent;
 }
-#sow figure .mask {
+#sow .mask {
   background-color: #a9dde3;
 }
 
