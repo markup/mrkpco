@@ -14,7 +14,8 @@ $mq-mobile-portrait   : 320px !default
 $mq-mobile-landscape  : 480px !default
 $mq-tablet-portrait   : 768px !default
 $mq-tablet-landscape  : 1024px !default
-$mq-desktop       : 1024px !default
+$mq-desktop           : 1280px !default
+$mq-monster           : 1700px !default
 
 // Both portrait and landscape
 @mixin mobile-only
@@ -101,6 +102,11 @@ $mq-desktop       : 1024px !default
 // Everything larger than a landscape tablet but less than or equal to the desktop (Altered for desktop only *and up*.)
 @mixin desktop-only
   @media only screen and (min-width : $mq-desktop + 60)
+    @content
+
+// Everything larger than a landscape tablet but less than or equal to the desktop (Altered for desktop only *and up*.)
+@mixin monster
+  @media only screen and (min-width : $mq-monster)
     @content
 
 // Retina screens have a 1.5 pixel ratio, not 2
