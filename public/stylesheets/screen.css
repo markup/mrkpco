@@ -722,6 +722,12 @@ section.work article figure .mask img {
     transition: color 0.35s ease, z-index 0s ease;
   }
 }
+@media only screen and (min-width: 1023px) {
+  section.work article figure.scroll::after {
+    padding-top: 120px;
+    padding-top: 12rem;
+  }
+}
 section.work article figure:hover.scroll::after {
   color: transparent !important;
   z-index: 0;

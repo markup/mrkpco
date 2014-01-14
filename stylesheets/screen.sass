@@ -349,6 +349,9 @@ section
               bottom: 0
               z-index: 10
               @include transition(color 0.35s ease,z-index 0s ease)
+          @include tablet-landscape-and-up
+            &::after
+              @include rempx(padding-top,120)
         &:hover
           &.scroll
             &::after
