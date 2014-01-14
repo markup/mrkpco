@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'bundler'
+Bundler.setup
 require 'tilt'
 Tilt.prefer Tilt::MarukuTemplate
 begin
